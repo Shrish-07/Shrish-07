@@ -14,20 +14,20 @@ export const publications: Publication[] = [
   {
     id: 'equity-signals',
     title: 'An Empirical Evaluation of Cross-Sectional Equity Signals Under Backtest Overfitting Diagnostics',
-    subtitle: 'SSRN Preprint — January 2026',
+    subtitle: 'SSRN Preprint · January 2026',
     abstract:
-      'A comprehensive empirical evaluation of nine cross-sectional equity signals, testing factor performance and selection bias under Combinatorial Purged Cross-Validation and Probability of Backtest Overfitting diagnostics. Central result: PBO ≈ 0.60 — most in-sample winners fail out-of-sample, confirmed by a public QuantConnect live replication.',
+      'A comprehensive empirical evaluation of nine cross-sectional equity signals, testing factor performance and selection bias under Combinatorial Purged Cross-Validation and Probability of Backtest Overfitting diagnostics. The central result is a PBO of about 0.60. Most in-sample winners fail out-of-sample, matching a public QuantConnect live replication.',
     status: 'published',
     statusLabel: 'Published · SSRN',
     links: [
-      { label: 'SSRN — official record', url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6078546', note: 'DOI 10.2139/ssrn.6078546' },
+      { label: 'SSRN · official record', url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6078546', note: 'DOI 10.2139/ssrn.6078546' },
       { label: 'QuantConnect live replication', url: 'https://www.quantconnect.cloud/backtest/c3b036b3c9c13a2161a484db6037baac/?theme=chrome', note: 'Out-of-sample executable backtest' },
     ],
   },
   {
     id: 'property-prices',
     title: 'Political Ideology and Residential Property Prices',
-    subtitle: 'Empirical study — 2026',
+    subtitle: 'Empirical study · 2026',
     abstract:
       'An empirical investigation into the relationship between political ideology metrics and residential property valuation, examining market-preference transmission mechanisms across electoral geographies in New York City. The empirical backbone is the O.R.B.I.T. forecasting platform.',
     status: 'pending',
@@ -39,9 +39,9 @@ export const publications: Publication[] = [
   {
     id: 'dpsi-whitepaper',
     title: 'The Procedural Due Process Stress Index (DPSI): Measuring Procedural Degradation in Automated Decision Systems',
-    subtitle: 'Framework write-up — 2026',
+    subtitle: 'Framework write-up · 2026',
     abstract:
-      'Introduces DPSI: procedural due process operationalized as a measurable system property across five dimensions (Notice Clarity, Opportunity to Contest, Timing Adequacy, Human Override Availability, Error Correction Pathways), with invariant enforcement and qualitative failure modes — symbolic due process, temporal compression, responsibility diffusion.',
+      'Introduces DPSI, procedural due process operationalized as a measurable system property across five dimensions (Notice Clarity, Opportunity to Contest, Timing Adequacy, Human Override Availability, Error Correction Pathways), with invariant enforcement and qualitative failure modes such as symbolic due process, temporal compression, and responsibility diffusion.',
     status: 'working-paper',
     statusLabel: 'Working paper',
     links: [
@@ -78,7 +78,7 @@ export const articles: Article[] = [
     title: 'Auditing the FairGround Fairness Benchmark Against EU AI Act Standards',
     kind: 'Audit',
     url: 'https://github.com/Shrish-07/fairground-fairness-benchmark',
-    note: 'The accompanying written audit — reproducibility, robustness, and legal alignment findings.',
+    note: 'The accompanying written audit covering reproducibility, robustness, and legal alignment findings.',
   },
 ]
 
@@ -87,12 +87,12 @@ export const learningQuotes = [
   {
     text: 'Programs must be written for people to read, and only incidentally for machines to execute.',
     source: 'Harold Abelson & Gerald Jay Sussman, Structure and Interpretation of Computer Programs (MIT Press, 1985)',
-    note: 'What it taught me: an audit is only as strong as the next reader’s ability to question and re-run it. That is why every research project here ships with reproducible pipelines, versioned baselines, and documented data lineage — the code is written for people first, machines second.',
+    note: 'What it taught me. An audit is only as strong as the next reader’s ability to question and re-run it. That is why every research project here ships with reproducible pipelines, versioned baselines, and documented data lineage, with the code written for people first and machines second.',
   },
   {
     text: 'The fundamental requisite of due process of law is the opportunity to be heard.',
     source: 'Grannis v. Orban, 234 U.S. 385, 394 (1916)',
-    note: 'What it taught me: if being heard is the fundamental requisite, then any automated system that quietly erodes the opportunity to contest is a due-process problem — measurable before it becomes a constitutional one. This line is the doctrinal seed of the Due Process Stress Index.',
+    note: 'What it taught me. If being heard is the fundamental requisite, then any automated system that quietly erodes the opportunity to contest is a due-process problem, one that is measurable before it becomes a constitutional one. This line is the doctrinal seed of the Due Process Stress Index.',
   },
 ]
 
@@ -110,12 +110,12 @@ export const references: string[] = [
   'Jegadeesh & Titman, “Returns to Buying Winners and Selling Losers,” Journal of Finance 48(1) (1993).',
   'Grannis v. Orban, 234 U.S. 385 (1916).',
   'Lundberg & Lee, “A Unified Approach to Interpreting Model Predictions” (SHAP), NeurIPS 30 (2017).',
-  'U.S. Consumer Financial Protection Bureau / FFIEC — Home Mortgage Disclosure Act (HMDA) data.',
-  'ProPublica — COMPAS recidivism data and the “Machine Bias” analysis (2016), as redistributed with FairGround.',
-  'NYC Department of City Planning (PLUTO/PAD), NYC Department of Finance (ACRIS sales), NYC Board of Elections (council and precinct returns).',
-  '“Price and Volume Data for All US Stocks & ETFs” — Marjanović, Kaggle (as used by the equity-signals pipeline).',
-  'Regulation (EU) 2024/1689 — the European AI Act, high-risk system requirements.',
-  'Embedded video on the Research page: Joy Buolamwini, “How I’m fighting bias in algorithms,” TEDxBeaconStreet (November 2016), embedded from ted.com.',
-  'Embedded audio on the Experience and project pages: “TRUTH” voice callout generated with ElevenLabs, a real asset from the Trust Me Bro project (Hack@Brown 2026).',
-  'Abelson & Sussman, Structure and Interpretation of Computer Programs, MIT Press (1985) — learning quote on the About page.',
+  'U.S. Consumer Financial Protection Bureau / FFIEC, Home Mortgage Disclosure Act (HMDA) data.',
+  'ProPublica, COMPAS recidivism data and the “Machine Bias” analysis (2016), as redistributed with FairGround.',
+  'NYC Department of City Planning (PLUTO/PAD), NYC Department of Finance (ACRIS sales), and NYC Board of Elections (council and precinct returns).',
+  '“Price and Volume Data for All US Stocks & ETFs” by Marjanović, Kaggle, as used by the equity-signals pipeline.',
+  'Regulation (EU) 2024/1689, the European AI Act, high-risk system requirements.',
+  'Embedded video on the Research page. Joy Buolamwini, “How I’m fighting bias in algorithms,” TEDxBeaconStreet (November 2016), embedded from ted.com.',
+  'Embedded audio on the Experience and project pages. The “TRUTH” voice callout was generated with ElevenLabs and is a real asset from my Trust Me Bro project (Hack@Brown 2026).',
+  'Abelson & Sussman, Structure and Interpretation of Computer Programs, MIT Press (1985), a learning quote on the About page.',
 ]

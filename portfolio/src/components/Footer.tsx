@@ -15,7 +15,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <div>
-          <p className="footer-brand">{profile.brand} — {profile.name}</p>
+          <p className="footer-brand">{profile.brand} · {profile.name}</p>
           <p className="footer-tag">{profile.tagline}</p>
           <ul className="footer-links mt-6" aria-label="External profiles">
             {profile.socials.slice(0, 3).map((s) => (

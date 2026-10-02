@@ -24,7 +24,7 @@ export default function Home() {
       <section className="hero" aria-label="Introduction">
         <div className="container">
           <Reveal>
-            <p className="eyebrow">Portfolio — MMXXVI</p>
+            <p className="eyebrow">Portfolio · MMXXVI</p>
             <h1 className="hero-title">{profile.name}</h1>
             <p className="hero-role">{profile.tagline}</p>
             <p className="lead">{profile.intro}</p>
@@ -41,10 +41,10 @@ export default function Home() {
         <div className="container">
           <Reveal>
             <p className="eyebrow">This website</p>
-            <h2 className="h-display">What this site is for</h2>
+            <h2 className="h-display">What I built this site for</h2>
             <p className="body-copy mt-4">
-              This is a personal portfolio and project gallery for {profile.name}.{' '}
-              It exists to do four things — each one is a promise you can check this site against.
+              This site is my portfolio and project gallery. I put it together around
+              four simple goals.
             </p>
           </Reveal>
           <Reveal delay={120}>
@@ -103,7 +103,7 @@ export default function Home() {
               ))}
             </div>
             <div className="btn-row mt-8">
-              <Link className="btn btn-ghost" href="/projects">View the full gallery — {projects.length} projects</Link>
+              <Link className="btn btn-ghost" href="/projects">View all {projects.length} projects</Link>
             </div>
           </Reveal>
         </div>
@@ -112,27 +112,27 @@ export default function Home() {
       <section className="section" aria-label="Design history">
         <div className="container">
           <Reveal>
-            <p className="eyebrow">Media — with a reason for every inclusion</p>
+            <p className="eyebrow">Media from the archive</p>
             <h2 className="h-display">Design history, kept on record</h2>
             <p className="body-copy mt-4">
               These are actual renders from the earlier WebGL version of this portfolio.
-              They are included on purpose: they document the design history this clean
-              rebuild replaces, and give the gallery its 3D-era context.
+              I keep them here because they document the design history that led to
+              this rebuild and give the gallery its 3D-era context.
             </p>
           </Reveal>
           <Reveal delay={120}>
             <div className="grid-2 mt-8">
               <MediaFigure
                 src="/images/site/webgl-genesis.png"
-                alt="The Genesis chapter of the previous WebGL portfolio: a glowing starfield around the S.M.V. brand."
-                title="Previous portfolio — Genesis"
-                caption="Included as design-history evidence: the opening chapter of the seven-chapter, scroll-driven WebGL narrative that preceded this site."
+                alt="The Genesis chapter of my previous WebGL portfolio, a glowing starfield around the S.M.V. brand."
+                title="Previous portfolio · Genesis"
+                caption="The opening chapter of the seven-chapter, scroll-driven WebGL narrative that preceded this site."
               />
               <MediaFigure
                 src="/images/site/webgl-contact.png"
-                alt="The Contact chapter of the previous WebGL portfolio: a beacon-like scene at the end of the corridor."
-                title="Previous portfolio — Contact"
-                caption="Included for the same reason — the closing scene of the earlier architecture, so the trajectory of the two builds is visible side by side."
+                alt="The Contact chapter of my previous WebGL portfolio, a beacon-like scene at the end of the corridor."
+                title="Previous portfolio · Contact"
+                caption="The closing scene of that earlier architecture, kept so the trajectory of both builds stays visible side by side."
               />
             </div>
           </Reveal>
@@ -143,11 +143,11 @@ export default function Home() {
         <div className="container">
           <Reveal>
             <p className="eyebrow">Participate</p>
-            <h2 className="h-display">Don’t just read it — stress-test it</h2>
+            <h2 className="h-display">Try the calculator yourself</h2>
             <p className="body-copy mt-4">
-              The Research page carries an interactive version of the Due Process Stress Index:
-              move the sliders and watch the failure modes trigger. If a claim on this site
-              doesn’t hold up to your own poking, that is a bug worth reporting.
+              The Research page carries an interactive version of my Due Process Stress
+              Index. Move the sliders and watch the composite score and the failure
+              flags respond.
             </p>
             <div className="btn-row mt-6">
               <Link className="btn btn-primary" href="/research">Try the DPSI calculator</Link>

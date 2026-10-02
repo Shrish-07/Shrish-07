@@ -27,10 +27,10 @@ const DEFAULT_SCORES: Record<Key, number> = {
 }
 
 function verdict(score: number): string {
-  if (score >= 80) return 'Robust — procedural affordances are largely intact'
-  if (score >= 60) return 'Adequate — watch the weakest dimension'
-  if (score >= 40) return 'Stressed — procedural failure modes are likely'
-  return 'Degraded — due-process failure modes are probable'
+  if (score >= 80) return 'Robust. Procedural affordances are largely intact'
+  if (score >= 60) return 'Adequate. Watch the weakest dimension'
+  if (score >= 40) return 'Stressed. Procedural failure modes are likely'
+  return 'Degraded. Due-process failure modes are probable'
 }
 
 export default function DpsiDemo() {
@@ -40,22 +40,22 @@ export default function DpsiDemo() {
     const index = Math.round(DIMENSIONS.reduce((sum, d) => sum + scores[d.key] * d.weight, 0))
     const flags: string[] = []
     if (scores.contest < 40)
-      flags.push('Symbolic due process risk: a contest channel exists on paper, but the score suggests it cannot affect outcomes.')
+      flags.push('Symbolic due process risk. A contest channel exists on paper, but the score suggests it cannot affect outcomes.')
     if (scores.timing < 40)
-      flags.push('Temporal compression risk: rights exist, but the response windows are unusable in practice.')
+      flags.push('Temporal compression risk. Rights exist, but the response windows are unusable in practice.')
     if (scores.override < 40)
-      flags.push('Responsibility diffusion risk: humans are present, but may lack authority or accountability.')
+      flags.push('Responsibility diffusion risk. Humans are present, but may lack authority or accountability.')
     return { index, flags }
   }, [scores])
 
   return (
     <div className="dpsi-panel">
-      <p className="eyebrow">Interactive — try it yourself</p>
-      <h3 className="card-title">Due Process Stress Index — simplified demo</h3>
+      <p className="eyebrow">Interactive · try it yourself</p>
+      <h3 className="card-title">Due Process Stress Index (simplified demo)</h3>
       <p className="small mt-2">
-        Move the sliders to stress a hypothetical automated decision system. The composite index
-        updates live, and the flags below call out the failure modes the full DPSI engine is built
-        to detect.
+        Move the sliders to see how a hypothetical automated decision system scores. The
+        composite index updates live, and the flags below call out the failure modes the full
+        DPSI engine is built to detect.
       </p>
       {DIMENSIONS.map((d) => (
         <div className="dpsi-dim" key={d.key}>
@@ -92,7 +92,7 @@ export default function DpsiDemo() {
         </ul>
       ) : null}
       <p className="small mt-6">
-        This is a simplified, illustrative rendering of the five-dimension framework — the full
+        This is a simplified, illustrative rendering of my five-dimension framework. The full
         DPSI engine additionally enforces logical invariants between dimensions and is documented
         in the project whitepaper. Values are illustrative, not calibrated.
       </p>

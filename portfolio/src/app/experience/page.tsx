@@ -14,12 +14,12 @@ export default function Experience() {
       <section className="section" aria-label="Open source">
         <div className="container">
           <Reveal>
-            <p className="eyebrow">Experience — the record</p>
-            <h1 className="h-display">Shipped in the open, proven in production</h1>
+            <p className="eyebrow">Experience</p>
+            <h1 className="h-display">Work I have shipped in the open</h1>
             <p className="body-copy mt-4">
-              The evidence of the working record: a merged performance PR on the Free Law
-              Project’s production archive, three hackathon builds, and the essays and
-              field notes that sit alongside the code.
+              My working record so far, from a merged performance PR on the Free Law
+              Project’s production archive to three hackathon builds, along with the
+              notes and artifacts that go with them.
             </p>
           </Reveal>
           <Reveal delay={120}>
@@ -27,8 +27,8 @@ export default function Experience() {
               <MediaFigure
                 src="/images/site/webgl-index.png"
                 alt="The Work index chapter of the previous WebGL portfolio version."
-                title="Field record — the previous WebGL index"
-                caption="Included because it is the visual record of the earlier portfolio architecture this site replaces; the design lineage matters to the story."
+                title="Field record, the previous WebGL index"
+                caption="A render from my earlier portfolio build, kept to show where the current design came from."
               />
             </div>
           </Reveal>
@@ -39,7 +39,7 @@ export default function Experience() {
         <div className="container">
           <Reveal>
             <p className="eyebrow">Hackathons</p>
-            <h2 className="h-display">Three builds, three proof-points</h2>
+            <h2 className="h-display">Three hackathon builds</h2>
           </Reveal>
           <Reveal delay={120}>
             <div className="stack-lg mt-8">
@@ -49,16 +49,16 @@ export default function Experience() {
                   <h3 className="card-title">
                     <a href="https://github.com/Sourish-07/HackBrown" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>Trust Me Bro</a>
                   </h3>
-                  <p className="card-desc">A wearable lie-detection hat fusing biometrics with Gemini reasoning into a live betting game — including real text-to-speech callouts.</p>
+                  <p className="card-desc">A wearable lie-detection hat fusing biometrics with Gemini reasoning into a live betting game, complete with real text-to-speech callouts.</p>
                   <div className="audio-wrap">
-                    <p className="mono-tag">“TRUTH” — audio callout from the demo</p>
+                    <p className="mono-tag">“TRUTH” · audio callout from the demo</p>
                     <audio controls preload="none" src="/audio/trust-me-bro-truth.mp3" className="mt-4">
                       Your browser does not support embedded audio.
                     </audio>
                     <p className="small mt-4">
-                      Included as evidence of a working end-to-end product: hardware sensors → AI scoring →
-                      real-time dashboard → audible verdict. Team: Shrish & Sourish Venugopal, Rayhan Mohamed,
-                      Lauren Bell.
+                      A real audio capture from the demo. Hardware sensors feed into AI scoring,
+                      a real-time dashboard, and an audible verdict. The team was me, Sourish
+                      Venugopal, Rayhan Mohamed, and Lauren Bell.
                     </p>
                   </div>
                 </div>
@@ -70,7 +70,7 @@ export default function Experience() {
                   <h3 className="card-title">
                     <a href="https://github.com/Sourish-07/HackDartmouth" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>IntelliCare AI</a>
                   </h3>
-                  <p className="card-desc">A nursing-monitoring dashboard that compresses event reasoning 50–60% before LLM calls — the HackDartmouth sibling of the Attune patient-safety system.</p>
+                  <p className="card-desc">A nursing-monitoring dashboard that compresses event reasoning 50–60% before LLM calls. It is the HackDartmouth sibling of my Attune patient-safety system.</p>
                 </div>
               </article>
 
@@ -102,10 +102,11 @@ export default function Experience() {
           <Reveal delay={120}>
             <div className="stack mt-8">
               <p className="body-copy">
-                Merged upstream on 8 January 2026 into the Free Law Project’s production
-                archive: an @lru_cache on the parenthetical tokenizer that cut its cost from
-                0.22s to 0.003s — a ~65× speedup with a &gt;99.9% hit rate. The review record,
-                the diff, and the merge log are the documentation.
+                On 8 January 2026 my PR merged upstream into the Free Law Project’s
+                production archive. It adds an @lru_cache to the parenthetical tokenizer
+                and cut its cost from 0.22s to 0.003s, about a 65× speedup with a hit
+                rate above 99.9%. The review record, the diff, and the merge log sit on
+                the pull request itself.
               </p>
             </div>
           </Reveal>

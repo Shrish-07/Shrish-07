@@ -6,7 +6,7 @@ import { publications, articles, references } from '@/data/publications'
 
 export const metadata: Metadata = {
   title: 'Research & Publications',
-  description: 'Published papers, working papers, articles, an interactive due-process calculator, and the full reference list.',
+  description: 'My published papers, working papers, articles, an interactive due-process calculator, and the full reference list.',
 }
 
 export default function Research() {
@@ -15,11 +15,11 @@ export default function Research() {
       <section className="section" aria-label="Publications">
         <div className="container">
           <Reveal>
-            <p className="eyebrow">Research — the public record</p>
+            <p className="eyebrow">Research</p>
             <h1 className="h-display">Publications & working papers</h1>
             <p className="body-copy mt-4">
-              Real, dated, and checkable work — each entry links to its official record or the
-              repository carrying the underlying evidence.
+              My public research record. Each entry links to its official page or to the
+              repository carrying the work behind it.
             </p>
           </Reveal>
           <Reveal delay={120}>
@@ -60,7 +60,7 @@ export default function Research() {
                 <li key={a.id}>
                   <a className="link-row" href={a.url} target="_blank" rel="noopener noreferrer">
                     <span className="link-title">{a.title}</span>
-                    <span className="link-note">{a.kind} — {a.note}</span>
+                    <span className="link-note">{a.kind} · {a.note}</span>
                     <span className="link-caret" aria-hidden="true">↗</span>
                   </a>
                 </li>
@@ -74,11 +74,12 @@ export default function Research() {
         <div className="container">
           <Reveal>
             <p className="eyebrow">Participation</p>
-            <h2 className="h-display">Stress-test due process yourself</h2>
+            <h2 className="h-display">Try the due-process calculator</h2>
             <p className="body-copy mt-4">
-              This is the invitation to engage, not just observe. Every dimension you weaken
-              is a stress test on due process — watch the composite drop and the failure modes
-              flag themselves. The full framework and its invariants live in the DPSI whitepaper.
+              This is my Due Process Stress Index as an interactive demo. Each slider stands
+              for one dimension of due process, and the composite index and the failure-mode
+              flags respond as you move them. The full framework and its invariants live in
+              the DPSI whitepaper.
             </p>
           </Reveal>
           <Reveal delay={120}>
@@ -98,7 +99,7 @@ export default function Research() {
       <section className="section" aria-label="Video">
         <div className="container">
           <Reveal>
-            <p className="eyebrow">Media — cited</p>
+            <p className="eyebrow">Media</p>
             <h2 className="h-display">Context worth watching</h2>
           </Reveal>
           <Reveal delay={120}>
@@ -106,15 +107,15 @@ export default function Research() {
               <div className="video-frame">
                 <iframe
                   src="https://embed.ted.com/talks/joy_buolamwini_how_i_m_fighting_bias_in_algorithms"
-                  title="Joy Buolamwini: How I'm fighting bias in algorithms (TED Talk)"
+                  title="Joy Buolamwini, How I'm fighting bias in algorithms (TED Talk)"
                 />
               </div>
               <figcaption>
-                <span className="cap-title">Embedded video — with a reason</span>
-                Joy Buolamwini’s TEDx talk “How I’m fighting bias in algorithms” (TEDxBeaconStreet,
-                November 2016) is included because it is the cultural backdrop for the audits in
-                this portfolio: her “coded gaze” framing is the argument the FairGround audit and
-                the Algorithmic Auditor are written against. Source: TED Conferences, LLC —
+                <span className="cap-title">Embedded video</span>
+                My interest in algorithmic auditing sits in the context of work like Joy
+                Buolamwini’s TEDx talk “How I’m fighting bias in algorithms” (TEDxBeaconStreet,
+                November 2016). Her “coded gaze” framing is the same argument my FairGround audit
+                and the Algorithmic Auditor build on. Talk from
                 <a className="smv-link" href="https://www.ted.com/talks/joy_buolamwini_how_i_m_fighting_bias_in_algorithms" target="_blank" rel="noopener noreferrer">{' '}ted.com ↗</a>
               </figcaption>
             </figure>

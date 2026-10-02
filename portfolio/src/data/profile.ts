@@ -16,25 +16,25 @@ export const profile = {
 
   /** Home — the detailed introduction */
   intro:
-    'I am Shrish Mudumby Venugopal — an engineer and researcher working where law, quantification, and systems engineering converge. I build the instruments — metrics, audits, simulations — that measure whether automated systems treat people fairly, and I ship the engineering that proves it: a performance patch merged into the court-data archive used across the legal ecosystem, a published SSRN paper on backtest overfitting, and full-stack applications from legal document intelligence to environmental safety dashboards.',
+    'I am Shrish Mudumby Venugopal, an engineer and researcher working where law, quantification, and systems engineering converge. I build the instruments, meaning the metrics, audits, and simulations, that measure whether automated systems treat people fairly, and I ship the engineering behind that question. That includes a performance patch merged into the court-data archive used across the legal ecosystem, a published SSRN paper on backtest overfitting, and full-stack applications from legal document intelligence to environmental safety dashboards.',
 
-  /** Home — explicit website objectives */
+  /** Home — what I built the site to do */
   objectives: [
     {
       title: 'Catalogue the real work',
-      body: 'Fourteen shipped projects with verifiable links, accurate tech stacks, and the figures, audio, and code that document them — no placeholders, no padding.',
+      body: 'Fourteen shipped projects with working links, accurate tech stacks, and the figures, audio, and code behind them. No placeholders and no padding.',
     },
     {
       title: 'Make the research legible',
-      body: 'Law × AI work explained so a non-specialist can follow the argument, and rigorous enough that a specialist can check the method.',
+      body: 'Law × AI work explained so a non-specialist can follow the argument, and rigorous enough that a specialist can read the method behind it.',
     },
     {
       title: 'Demonstrate craft',
-      body: 'A fast, accessible, hand-built site: no template, minimal dependencies, one consistent design system from the first page to the last.',
+      body: 'A fast, accessible, hand-built site. No template, minimal dependencies, one consistent design system from the first page to the last.',
     },
     {
       title: 'Invite participation',
-      body: 'Try the interactive due-process calculator, read the papers and audits, stress-test the claims, and open a channel to discuss the work.',
+      body: 'Try the interactive due-process calculator, read the papers and audits, and open a channel to discuss the work with me.',
     },
   ],
 
@@ -43,25 +43,25 @@ export const profile = {
     {
       n: 'I',
       title: 'The Engineer',
-      body: 'Python to TypeScript, models to merged PRs. Performance-aware systems work — including a 65× speedup merged into CourtListener, the court-data archive used across the legal ecosystem.',
+      body: 'I work from Python to TypeScript, models to merged PRs. My favorite example is a 65× speedup merged into CourtListener, the court-data archive used across the legal ecosystem.',
     },
     {
       n: 'II',
       title: 'The Researcher',
-      body: 'Operationalizes legal concepts into measurable metrics — five dimensions of procedural due process, fairness-benchmark audits, and validation methods that survive scrutiny.',
+      body: 'I turn legal concepts into measurable metrics, from five dimensions of procedural due process to fairness-benchmark audits and validation methods that hold up under scrutiny.',
     },
     {
       n: 'III',
       title: 'The Builder',
-      body: 'End-to-end products: computer-vision patient monitoring, legal document intelligence, quant pipelines, and environmental dashboards — designed, built, shipped.',
+      body: 'I build end-to-end products, from computer-vision patient monitoring and legal document intelligence to quant pipelines and environmental dashboards.',
     },
   ],
 
   /** About — longer bio paragraphs (facts drawn only from the work itself) */
   bio: [
-    'I work at the intersection of computational law, systems engineering, and institutional design. The central question of my work is simple to state and hard to answer: *can an automated system preserve the procedural rights that a human institution would owe you?*',
-    'On the research side, I build quantitative instruments that answer it — a five-dimension stress index for procedural due process, agent-based simulations that red-team legal procedure under AI mediation, independent audits of published fairness benchmarks against the EU AI Act and U.S. anti-discrimination law, and empirical finance research that proves most backtested "edges" are overfitting artifacts.',
-    'On the engineering side, I prove the point in production-shaped code: a 65× tokenizer speedup merged into the Free Law Project’s CourtListener, a FastAPI legal-document summarizer, a computer-vision patient-monitoring system, an NYC property forecasting platform, and an MCP trading agent that enforces dry-run safety at the logic layer, not just in config.',
+    'I work at the intersection of computational law, systems engineering, and institutional design. The central question of my work is simple to state and hard to answer. Can an automated system preserve the procedural rights that a human institution would owe you?',
+    'On the research side, I build quantitative instruments that answer it, including a five-dimension stress index for procedural due process, agent-based simulations that red-team legal procedure under AI mediation, independent audits of published fairness benchmarks against the EU AI Act and U.S. anti-discrimination law, and empirical finance research showing that most backtested edges are overfitting artifacts.',
+    'On the engineering side, I apply the same standard in production-shaped code, from a 65× tokenizer speedup merged into the Free Law Project’s CourtListener to a FastAPI legal-document summarizer, a computer-vision patient-monitoring system, an NYC property forecasting platform, and an MCP trading agent that enforces dry-run safety at the logic layer, not just in config.',
   ],
 
   /** Overview stats (all sourced from the real record) */
@@ -80,31 +80,31 @@ export const profile = {
   socials: [
     {
       id: 'github',
-      label: 'GitHub — Shrish-07',
+      label: 'GitHub · Shrish-07',
       url: 'https://github.com/Shrish-07',
-      note: 'The main engineering record — source code for nearly every project on this site lives here.',
+      note: 'My main engineering record. The source code for nearly every project on this site lives here.',
     },
     {
       id: 'github-alt',
-      label: 'GitHub — Sourish-07 (teammate account)',
+      label: 'GitHub · Sourish-07 (teammate account)',
       url: 'https://github.com/Sourish-07',
-      note: 'The second account where collaborative/hackathon work is hosted — some repositories below link here.',
+      note: 'The second account where collaborative and hackathon work is hosted. Some repositories on this site link there.',
     },
     {
       id: 'linkedin',
       label: 'LinkedIn',
       url: 'https://www.linkedin.com/in/shrish-mudumby-venugopal-57884a358/',
-      note: 'Professional profile — work history, education, and endorsements in one place.',
+      note: 'My professional profile with work history, education, and endorsements in one place.',
     },
     {
       id: 'medium',
-      label: 'Medium — shrishvenugopal11',
+      label: 'Medium · shrishvenugopal11',
       url: 'https://medium.com/@shrishvenugopal11',
-      note: 'Essays and field notes on law, automation, and algorithmic fairness.',
+      note: 'My essays and field notes on law, automation, and algorithmic fairness.',
     },
     {
       id: 'ssrn',
-      label: 'SSRN — Published paper',
+      label: 'SSRN · Published paper',
       url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6078546',
       note: 'The official record of “Empirical Evaluation of Cross-Sectional Equity Signals” (DOI 10.2139/ssrn.6078546).',
     },
@@ -112,7 +112,7 @@ export const profile = {
       id: 'site',
       label: 'Live previous portfolio',
       url: 'https://shrish-07.vercel.app',
-      note: 'The earlier WebGL version of this portfolio, still live — the design history this site builds on.',
+      note: 'The earlier WebGL version of this portfolio, still live. It shows the design history this site builds on.',
     },
   ],
 } as const

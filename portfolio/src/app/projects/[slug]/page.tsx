@@ -34,7 +34,7 @@ export default async function ProjectPage({
     .slice(0, 3)
 
   return (
-    <section className="section" aria-label={`Project — ${project.name}`}>
+    <section className="section" aria-label={`Project · ${project.name}`}>
       <div className="container">
         <Reveal>
           <p className="mono-tag">
@@ -73,7 +73,7 @@ export default async function ProjectPage({
           <Reveal delay={140}>
             <div className="card mt-8" style={{ padding: '1rem 1.35rem' }}>
               <p className="small">
-                <strong style={{ color: 'var(--accent-dim)' }}>Highlight —</strong>{' '}
+                <strong style={{ color: 'var(--accent-dim)' }}>Highlight ·{' '}</strong>{' '}
                 <span style={{ color: 'var(--text-primary)' }}>{project.highlight}</span>
               </p>
             </div>
@@ -100,7 +100,7 @@ export default async function ProjectPage({
         {project.images && project.images.length > 0 ? (
           <Reveal delay={100}>
             <div className="mt-10">
-              <p className="eyebrow">Media — every figure with a reason</p>
+              <p className="eyebrow">Media</p>
               <div className="stack-lg mt-6">
                 {project.images.map((img) => (
                   <MediaFigure
@@ -119,7 +119,7 @@ export default async function ProjectPage({
         {project.audio ? (
           <Reveal delay={120}>
             <div className="mt-10">
-              <p className="eyebrow">Audio — a real artifact from the demo</p>
+              <p className="eyebrow">Audio</p>
               <div className="audio-wrap mt-6">
                 <p className="mono-tag">{project.audio.title}</p>
                 <audio controls preload="none" src={project.audio.src} className="mt-4">

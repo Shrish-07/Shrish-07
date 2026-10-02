@@ -5,7 +5,7 @@ import { profile } from '@/data/profile'
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Open a channel — GitHub, LinkedIn, Medium, and SSRN, each with its reason for being here.',
+  description: 'Open a channel. GitHub, LinkedIn, Medium, and SSRN, each with its reason for being here.',
 }
 
 export default function Contact() {
@@ -14,11 +14,11 @@ export default function Contact() {
       <section className="section" aria-label="Contact">
         <div className="container">
           <Reveal>
-            <p className="eyebrow">Contact — signal</p>
+            <p className="eyebrow">Contact</p>
             <h1 className="h-display">Open a channel</h1>
             <p className="body-copy mt-4">
-              Research, engineering, or collaboration at the boundary of law and computation —
-              the signal is open. Every link below is included for a stated reason, not decoration.
+              I am open to research, engineering, or collaboration at the boundary of law
+              and computation. Every link below is here for a reason, not decoration.
             </p>
           </Reveal>
           <Reveal delay={120}>
@@ -41,19 +41,19 @@ export default function Contact() {
         <div className="container">
           <Reveal>
             <p className="eyebrow">Participate</p>
-            <h2 className="h-display">This site is an invitation, not a brochure</h2>
+            <h2 className="h-display">Three ways to engage with the work</h2>
             <p className="body-copy mt-4">
-              Three ways to engage with the work rather than scroll past it:
+              If you want to do more than scroll past, these are my suggestions.
             </p>
           </Reveal>
           <Reveal delay={120}>
             <div className="panel-grid mt-8">
               <div>
                 <p className="panel-num">01</p>
-                <h3 className="panel-title">Stress-test the DPSI</h3>
+                <h3 className="panel-title">Try the DPSI</h3>
                 <p className="panel-body">
-                  Move the five sliders on the Research page and try to break my framework’s
-                  assumptions — every failure flag you trigger is the point.
+                  Move the five sliders on the Research page and watch how the composite
+                  index and the failure flags respond.
                 </p>
                 <div className="mt-4">
                   <Link className="smv-link" href="/research">Open the calculator <span aria-hidden="true">→</span></Link>
@@ -63,9 +63,9 @@ export default function Contact() {
                 <p className="panel-num">02</p>
                 <h3 className="panel-title">Question the audits</h3>
                 <p className="panel-body">
-                  The FairGround audit and HMDA pipeline are meant to be checked. Open an issue
-                  on any project repository if a claim, methodology, or replication step needs
-                  a sharper answer.
+                  The FairGround audit and the HMDA pipeline are documented so they can be
+                  checked. Open an issue on any project repository if a claim, a method,
+                  or a replication step needs a sharper answer.
                 </p>
                 <div className="mt-4">
                   <a className="smv-link" href="https://github.com/Shrish-07" target="_blank" rel="noopener noreferrer">Browse the repositories <span aria-hidden="true">↗</span></a>
@@ -75,8 +75,8 @@ export default function Contact() {
                 <p className="panel-num">03</p>
                 <h3 className="panel-title">Read and respond</h3>
                 <p className="panel-body">
-                  The SSRN paper is public and the Medium essays are open — dissent with the
-                  abstract is exactly the response the work was written to provoke.
+                  The SSRN paper is public, and the Medium essays are open. Replies and
+                  disagreements are welcome.
                 </p>
                 <div className="mt-4">
                   <a className="smv-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6078546" target="_blank" rel="noopener noreferrer">Read the paper <span aria-hidden="true">↗</span></a>
@@ -86,8 +86,8 @@ export default function Contact() {
           </Reveal>
           <Reveal delay={160}>
             <p className="small mt-8">
-              Note: a few project repositories live under teammate accounts (Sourish-07,
-              jabnow) or may be private — the links point to the canonical project home either way.
+              A few project repositories live under teammate accounts (Sourish-07, jabnow),
+              and some may be private. The links point to the canonical project home either way.
             </p>
           </Reveal>
         </div>

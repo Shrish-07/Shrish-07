@@ -14,7 +14,7 @@ export default function Quote({
   return (
     <figure className="quote">
       <blockquote>“{text}”</blockquote>
-      <figcaption>— {source}</figcaption>
+      <figcaption>{source}</figcaption>
       {note ? <p className="quote-note">{note}</p> : null}
     </figure>
   )

@@ -20,10 +20,10 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://shrish-07.vercel.app'),
   title: {
-    default: `${profile.name} — ${profile.brand}`,
-    template: `%s — ${profile.brand}`,
+    default: `${profile.name} · ${profile.brand}`,
+    template: `%s · ${profile.brand}`,
   },
-  description: `${profile.tagline}. Portfolio of ${profile.name}: due-process metrics, algorithmic audits, fairness benchmarks, and full-stack systems — engineered and published in the open.`,
+  description: `${profile.tagline}. My portfolio, built around due-process metrics, algorithmic audits, fairness benchmarks, and full-stack systems.`,
   keywords: [
     'Shrish Mudumby Venugopal',
     'computational law',
@@ -35,16 +35,16 @@ export const metadata: Metadata = {
   icons: { icon: '/favicon.svg' },
   openGraph: {
     type: 'website',
-    title: `${profile.name} — ${profile.brand}`,
+    title: `${profile.name} · ${profile.brand}`,
     description: profile.tagline,
     siteName: profile.brand,
   },
-  twitter: { card: 'summary', title: `${profile.name} — ${profile.brand}`, description: profile.tagline },
+  twitter: { card: 'summary', title: `${profile.name} · ${profile.brand}`, description: profile.tagline },
   robots: { index: true, follow: true },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0a0a0b',
+  themeColor: '#f4f3ee',
   width: 'device-width',
   initialScale: 1,
 }
