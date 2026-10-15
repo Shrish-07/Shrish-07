@@ -1,9 +1,7 @@
 ﻿# S.M.V.
 
-**Shrish Mudumby Venugopal** — computational law, systems engineering, institutional design.
+**Shrish Mudumby Venugopal**
 
-I build the instruments — metrics, audits, simulations — that measure whether automated
-systems treat people fairly, and the engineering to prove it.
 
 ## Highlights
 
