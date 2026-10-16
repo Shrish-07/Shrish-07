@@ -13,9 +13,9 @@ const stats = [
   { value: String(profile.stats.repos), label: 'Repositories' },
   { value: profile.stats.speedup, label: 'CourtListener speedup', accent: true },
   { value: String(profile.stats.publications), label: 'Publications' },
-  { value: String(profile.stats.legalDimensions), label: 'Due-process dimensions' },
+  { value: String(profile.stats.firstPlaces), label: 'Hackathon first places' },
+  { value: String(profile.stats.honors), label: 'Honors & awards' },
   { value: String(profile.stats.mergedPRs), label: 'Merged upstream PR' },
-  { value: String(profile.stats.hackathons), label: 'Hackathons' },
 ]
 
 export default function Home() {

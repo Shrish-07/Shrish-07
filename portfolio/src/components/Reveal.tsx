@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 /**
- * Reveal — fades content up as it enters the viewport.
+ * Reveal, fades content up as it enters the viewport.
  * Honors prefers-reduced-motion by rendering immediately.
  */
 export default function Reveal({
@@ -21,10 +21,7 @@ export default function Reveal({
   useEffect(() => {
     const el = ref.current
     if (!el) return
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setVisible(true)
-      return
-    }
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

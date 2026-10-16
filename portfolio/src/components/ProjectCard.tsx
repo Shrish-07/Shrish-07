@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Project } from '@/data/projects'
 
 /**
- * ProjectCard — the gallery building block.
+ * ProjectCard, the gallery building block.
  * Cover image when one exists; links are labelled with plain, honest names.
  */
 export default function ProjectCard({ project }: { project: Project }) {

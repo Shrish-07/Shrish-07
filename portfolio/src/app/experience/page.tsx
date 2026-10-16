@@ -2,34 +2,46 @@
 import Link from 'next/link'
 import Reveal from '@/components/Reveal'
 import MediaFigure from '@/components/MediaFigure'
+import { profile } from '@/data/profile'
 
 export const metadata: Metadata = {
   title: 'Experience',
-  description: 'Hackathons, merged open-source contributions, and the field notes behind them.',
+  description: 'Honors and awards, hackathon wins, a national research nomination, merged open-source contributions, and the field notes behind them.',
 }
 
 export default function Experience() {
   return (
     <>
-      <section className="section" aria-label="Open source">
+      <section className="section" aria-label="Honors and awards">
         <div className="container">
           <Reveal>
             <p className="eyebrow">Experience</p>
-            <h1 className="h-display">Work I have shipped in the open</h1>
+            <h1 className="h-display">Honors, awards, and the open record</h1>
             <p className="body-copy mt-4">
-              My working record so far, from a merged performance PR on the Free Law
-              Project’s production archive to three hackathon builds, along with the
-              notes and artifacts that go with them.
+              The formal recognition first, then the work that earned it. A first-place
+              multi-agent build at MHacks, a first-place fintech track at TartanHacks,
+              a national research nomination, and a merged pull request on production
+              open source.
             </p>
           </Reveal>
           <Reveal delay={120}>
-            <div className="stack-lg mt-8">
-              <MediaFigure
-                src="/images/site/webgl-index.png"
-                alt="The Work index chapter of the previous WebGL portfolio version."
-                title="Field record, the previous WebGL index"
-                caption="A render from my earlier portfolio build, kept to show where the current design came from."
-              />
+            <div className="grid-3 mt-8">
+              {profile.honors.map((h) => (
+                <article key={h.title} className="card">
+                  <div className="card-body">
+                    <p className="card-meta">{h.org} · {h.date}</p>
+                    <h3 className="card-title">{h.title}</h3>
+                    <p className="card-desc">{h.body}</p>
+                    {h.link ? (
+                      <div className="card-links">
+                        <a className="smv-link" href={h.link.url} target="_blank" rel="noopener noreferrer">
+                          {h.link.label} <span aria-hidden="true">↗</span>
+                        </a>
+                      </div>
+                    ) : null}
+                  </div>
+                </article>
+              ))}
             </div>
           </Reveal>
         </div>
@@ -39,7 +51,7 @@ export default function Experience() {
         <div className="container">
           <Reveal>
             <p className="eyebrow">Hackathons</p>
-            <h2 className="h-display">Three hackathon builds</h2>
+            <h2 className="h-display">Five hackathon builds, two first places</h2>
           </Reveal>
           <Reveal delay={120}>
             <div className="stack-lg mt-8">
@@ -83,6 +95,36 @@ export default function Experience() {
                   <p className="card-desc">Real-time YOLOv8 video analysis of patient discomfort, falls, and unsafe activity with a LiveKit voice interface for hands-free clinical use.</p>
                 </div>
               </article>
+
+              <article className="card">
+                <div className="card-body">
+                  <p className="card-meta">MHacks 2026 · 1st Place · Relay Interactive Agents Track</p>
+                  <h3 className="card-title">
+                    <Link href="/projects/amyna" style={{ color: 'inherit', textDecoration: 'none' }}>Amyna</Link>
+                  </h3>
+                  <p className="card-desc">The multi-agent medical-billing advocate that won the Relay track at MHacks 2026. The backend, the Fetch.ai uAgents orchestration, and the 300-test suite were mine.</p>
+                </div>
+              </article>
+
+              <article className="card">
+                <div className="card-body">
+                  <p className="card-meta">TartanHacks 2026 · 1st Place · BNY Track</p>
+                  <h3 className="card-title">
+                    <a href="https://github.com/jabnow/Politi-folio" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>Politi-folio</a>
+                  </h3>
+                  <p className="card-desc">First place in the BNY back-office fintech track. Geopolitical intelligence, XRP Ledger reconciliation, sanctions screening, and risk scoring behind one dashboard.</p>
+                </div>
+              </article>
+            </div>
+          </Reveal>
+          <Reveal delay={140}>
+            <div className="stack-lg mt-8">
+              <MediaFigure
+                src="/images/site/webgl-index.png"
+                alt="The Work index chapter of the previous WebGL portfolio version."
+                title="Field record, the previous WebGL index"
+                caption="A render from my earlier portfolio build, kept to show where the current design came from."
+              />
             </div>
           </Reveal>
           <Reveal delay={160}>

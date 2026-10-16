@@ -1,5 +1,5 @@
 ﻿/**
- * MediaFigure — an image with a caption that states what the media is
+ * MediaFigure, an image with a caption that states what the media is
  * and why it was included on the page.
  */
 export default function MediaFigure({

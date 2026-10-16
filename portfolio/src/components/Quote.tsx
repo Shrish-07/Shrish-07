@@ -1,6 +1,6 @@
 ﻿/**
- * Quote — a cited quotation paired with a short note on what it taught
- * the author. Supports the “descriptions of learning” requirement.
+ * Quote, a cited quotation paired with a short note on what it taught
+ * the author. Supports the "descriptions of learning" requirement.
  */
 export default function Quote({
   text,

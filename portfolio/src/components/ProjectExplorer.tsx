@@ -10,7 +10,7 @@ const CATEGORIES = [
 ]
 
 /**
- * ProjectExplorer — live search + category filter for the gallery.
+ * ProjectExplorer, live search + category filter for the gallery.
  * Purely local state; no network calls.
  */
 export default function ProjectExplorer() {

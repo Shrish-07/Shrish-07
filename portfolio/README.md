@@ -1,12 +1,14 @@
 ﻿# S.M.V. · Portfolio
 
-A clean, fast, multi-page portfolio and project gallery for my work in
-computational law, systems engineering, and institutional design.
+A clean, fast, multi-page portfolio and project gallery for my work across
+autonomous agents, quantitative finance, and computational law, three frontiers
+carried with equal weight.
 
 ## Architecture
 
 - **Framework.** Next.js 16 (App Router, TypeScript, strict)
 - **Styling.** Tailwind CSS 4 + a hand-rolled design-token layer (`src/app/globals.css`)
+- **Theme.** Midnight Terminal, a deep ink field with an electric periwinkle accent
 - **Type.** Space Grotesk (display) + JetBrains Mono (instrument), via `next/font`
 - **Motion.** CSS transitions + a small `IntersectionObserver` reveal, GPU-cheap and honors
   `prefers-reduced-motion`
@@ -16,13 +18,13 @@ computational law, systems engineering, and institutional design.
 
 | Route | Purpose |
 |---|---|
-| `/` | Introduction, website goals, stats, featured projects, design-history media |
+| `/` | Introduction, website goals, stats, one featured project per pillar, design-history media |
 | `/about` | Bio, the three pillars, two cited learning quotes, skills |
-| `/projects` | The gallery with 14 projects, live search, and a category filter |
+| `/projects` | The gallery with 15 projects, live search, and a category filter |
 | `/projects/[slug]` | Full write-up per project with links, media, audio, citations, and related projects |
 | `/research` | Publications, articles, interactive DPSI calculator, embedded video, references |
-| `/experience` | Hackathon builds (with an audio artifact) and the CourtListener PR |
-| `/contact` | Every link with its stated purpose, plus ways to engage |
+| `/experience` | Honors & awards (MHacks 1st place, CRA nomination, TartanHacks 1st place), five hackathon builds (with an audio artifact), and the CourtListener PR |
+| `/contact` | A private contact form that emails me directly, plus the public channels (LinkedIn, GitHub, Medium, SSRN) |
 
 ## Develop
 

@@ -23,13 +23,16 @@ export const metadata: Metadata = {
     default: `${profile.name} · ${profile.brand}`,
     template: `%s · ${profile.brand}`,
   },
-  description: `${profile.tagline}. My portfolio, built around due-process metrics, algorithmic audits, fairness benchmarks, and full-stack systems.`,
+  description: `${profile.tagline}. Autonomous agents, quant research, fairness systems, and the engineering behind them.`,
   keywords: [
     'Shrish Mudumby Venugopal',
-    'computational law',
+    'AI agents',
+    'MCP',
+    'autonomous trading',
+    'quantitative finance',
+    'machine learning',
     'algorithmic auditing',
-    'AI fairness',
-    'due process',
+    'law and technology',
     'systems engineering',
   ],
   icons: { icon: '/favicon.svg' },
@@ -44,7 +47,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#f4f3ee',
+  themeColor: '#0a0c12',
   width: 'device-width',
   initialScale: 1,
 }

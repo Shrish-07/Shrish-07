@@ -3,7 +3,7 @@
 import { useMemo, useState } from 'react'
 
 /**
- * DpsiDemo — an interactive, simplified rendering of the DPSI framework.
+ * DpsiDemo, an interactive, simplified rendering of the DPSI framework.
  * Five sliders → weighted composite index → likely procedural state.
  * This is the site's invitation for viewers to participate.
  */

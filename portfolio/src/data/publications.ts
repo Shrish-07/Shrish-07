@@ -1,4 +1,4 @@
-/* ─── Publications, articles, quotes, and references ─── */
+/* == Publications, articles, quotes, and references == */
 
 export interface Publication {
   id: string
@@ -38,7 +38,7 @@ export const publications: Publication[] = [
   },
   {
     id: 'dpsi-whitepaper',
-    title: 'The Procedural Due Process Stress Index (DPSI): Measuring Procedural Degradation in Automated Decision Systems',
+    title: 'The Procedural Due Process Stress Index (DPSI), Measuring Procedural Degradation in Automated Decision Systems',
     subtitle: 'Framework write-up · 2026',
     abstract:
       'Introduces DPSI, procedural due process operationalized as a measurable system property across five dimensions (Notice Clarity, Opportunity to Contest, Timing Adequacy, Human Override Availability, Error Correction Pathways), with invariant enforcement and qualitative failure modes such as symbolic due process, temporal compression, and responsibility diffusion.',
@@ -61,7 +61,7 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: 'black-box-courtroom',
-    title: 'The Black Box in the Courtroom: Can AI Risk Assessments Preserve Due Process?',
+    title: 'The Black Box in the Courtroom, Can AI Risk Assessments Preserve Due Process?',
     kind: 'Essay',
     url: 'https://medium.com/@shrishvenugopal11',
     note: 'An essay on whether opaque risk-assessment tools can satisfy the procedural guarantees courts require.',
@@ -96,15 +96,15 @@ export const learningQuotes = [
   },
 ]
 
-/** The thesis quote from my own DPSI whitepaper, shown on the home page. */
+/** The thesis quote from my SSRN paper, shown on the home page. */
 export const thesisQuote = {
-  text: 'Procedural due process must be treated as a measurable system property rather than a binary legal threshold.',
-  source: 'S.M.V., “The Procedural Due Process Stress Index” whitepaper (2026)',
+  text: 'A probability of backtest overfitting near 0.60 means most in-sample winners are statistical artifacts, not skill.',
+  source: 'S.M.V., “An Empirical Evaluation of Cross-Sectional Equity Signals Under Backtest Overfitting Diagnostics” (SSRN, 2026)',
 }
 
 /** Numbered reference list for externally sourced content across the site. */
 export const references: string[] = [
-  'Simson, Fabris, Fröhner, Kreuter & Kern, “Bias Begins with Data: The FairGround Corpus for Robust and Reproducible Research on Algorithmic Fairness,” arXiv:2510.22363 (2025).',
+  'Simson, Fabris, Fröhner, Kreuter & Kern, “Bias Begins with Data,” the FairGround Corpus for robust and reproducible research on algorithmic fairness, arXiv:2510.22363 (2025).',
   'Bailey, Borwein, López de Prado & Zhu, “The Probability of Backtest Overfitting,” Journal of Computational Finance 20(4), 39–72 (2017).',
   'López de Prado, Advances in Financial Machine Learning, Wiley (2018).',
   'Jegadeesh & Titman, “Returns to Buying Winners and Selling Losers,” Journal of Finance 48(1) (1993).',
@@ -115,6 +115,8 @@ export const references: string[] = [
   'NYC Department of City Planning (PLUTO/PAD), NYC Department of Finance (ACRIS sales), and NYC Board of Elections (council and precinct returns).',
   '“Price and Volume Data for All US Stocks & ETFs” by Marjanović, Kaggle, as used by the equity-signals pipeline.',
   'Regulation (EU) 2024/1689, the European AI Act, high-risk system requirements.',
+  'Fetch.ai uAgents framework and the Agentverse platform, as used by Amyna, the MHacks 2026 Relay Interactive Agents Track winner.',
+  'Robinhood MCP trading server (agent.robinhood.com), the brokerage interface used by the MCP Trading Agent.',
   'Embedded video on the Research page. Joy Buolamwini, “How I’m fighting bias in algorithms,” TEDxBeaconStreet (November 2016), embedded from ted.com.',
   'Embedded audio on the Experience and project pages. The “TRUTH” voice callout was generated with ElevenLabs and is a real asset from my Trust Me Bro project (Hack@Brown 2026).',
   'Abelson & Sussman, Structure and Interpretation of Computer Programs, MIT Press (1985), a learning quote on the About page.',

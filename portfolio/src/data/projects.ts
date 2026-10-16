@@ -1,12 +1,12 @@
-﻿/* ─── Project catalogue — every entry is accurate to the repository ─── */
+﻿/* == Project catalogue, every entry accurate to the repository == */
 
-export type ProjectCategory = 'law-fairness' | 'quant-data' | 'fullstack' | 'ai-systems' | 'hackathon'
+export type ProjectCategory = 'ai-agents' | 'quant-finance' | 'law-fairness' | 'fullstack' | 'hackathon'
 
 export const categoryLabels: Record<ProjectCategory, string> = {
+  'ai-agents': 'AI & Agents',
+  'quant-finance': 'Quant & Finance',
   'law-fairness': 'Law & Fairness',
-  'quant-data': 'Quant & Data',
-  'fullstack': 'Full-Stack',
-  'ai-systems': 'AI Systems',
+  fullstack: 'Full-Stack',
   hackathon: 'Hackathons',
 }
 
@@ -42,7 +42,48 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  /* ── Signature: law × computation ── */
+  /* == AI & agents, the lead story == */
+  {
+    slug: 'amyna',
+    name: 'Amyna',
+    tagline: 'MHacks 2026 · 1st Place · Relay Interactive Agents Track',
+    domain: 'Multi-Agent Systems',
+    category: 'ai-agents',
+    year: '2026',
+    short: 'First-place build at MHacks 2026. A multi-agent system that cross-checks medical bills against clinical visit records, flags questionable charges, and disputes billing errors by phone, with the patient approving every step.',
+    long: [
+      'Amyna helps ordinary people fight confusing medical bills. A patient says, in plain English or a voice memo, that the hospital bill looks wrong. The system then reads the bill, compares it against the patient’s own authorized health records and visit evidence, finds charges that do not match, and explains everything in plain language. Only after the patient explicitly approves does it place a call to the insurance company through a voice pipeline.',
+      'I built the backend. That means the orchestrated agent workflow on Fetch.ai uAgents published to Agentverse, the interactive-approval loop over Relay, the telephony and voice layer, the case state machine, and the security policy. The suite is 300+ deterministic Python tests plus 43 Relay vitest tests covering duplicate webhooks, malicious agent senders, revocations, and vendor outages, with no real patient data anywhere.',
+    ],
+    tech: ['Python', 'Fetch.ai uAgents', 'Agentverse', 'Relay', 'Voice AI', 'Docker'],
+    highlight: '1st Place · MHacks 2026',
+    featured: true,
+    links: [
+      { label: 'Winning repository (Shrish-07)', url: 'https://github.com/Shrish-07/Supreme-Waffles', note: 'The original MHacks 2026 winning repo, with the full backend, agent workflow, docs, and deployment stack.' },
+      { label: 'Active development repo', url: 'https://github.com/tiwari-ira/amyna', note: 'Where development of Amyna moved after the hackathon.' },
+    ],
+  },
+  {
+    slug: 'mcp-agent',
+    name: 'MCP Trading Agent',
+    tagline: 'Autonomous Agentic Trading',
+    domain: 'AI · Quant Infrastructure',
+    category: 'ai-agents',
+    year: '2026',
+    short: 'An Anthropic-only, MCP-native autonomous equity trading agent. It runs scheduled decision cycles on a live brokerage, reads market data over the Robinhood MCP server, and enforces hard risk rules deterministically in code.',
+    long: [
+      'This is an autonomous trading loop built the MCP-native way. Three times per trading day, at market open, midday, and near close, the agent wakes up, pulls live portfolio, quote, and technical data directly from Robinhood’s MCP server over Streamable HTTP, drives every judgment call through Claude Sonnet and Haiku, and executes orders through the same MCP server.',
+      'A feature-flagged weekly layer re-ranks the trading universe from Finnhub headlines scored by a ModernBERT financial sentiment model, with guarantees that held tickers are never dropped and that any pipeline failure keeps the previous universe. Hard risk rules are enforced deterministically in code rather than prompted to the model, pricing and retry handling are tracked explicitly, and DRY_RUN is enforced at the logic layer, not just in config.',
+    ],
+    tech: ['Python', 'MCP', 'Anthropic Claude', 'ModernBERT', 'Risk Engineering'],
+    highlight: 'Risk rules enforced in code',
+    links: [
+      { label: 'GitHub repository', url: 'https://github.com/Shrish-07/MCP', note: 'The agent core, the MCP client, the risk engine, the sentiment selection layer, and the run documentation.' },
+    ],
+    citations: ['Robinhood MCP trading endpoint, used as the live external system.'],
+  },
+
+  /* == Law & fairness == */
   {
     slug: 'due-process-index',
     name: 'Due Process Stress Index',
@@ -57,13 +98,12 @@ export const projects: Project[] = [
     ],
     tech: ['Python', 'Fairness', 'Metrics', 'Simulation', 'Legal'],
     highlight: '5 dimensions → 1 index',
-    featured: true,
     links: [
       { label: 'GitHub repository', url: 'https://github.com/Shrish-07/procedural-due-process-index', note: 'Full source, including the indicator engine, invariants, the failure-mode registry, and the whitepaper.' },
       { label: 'Whitepaper (repo)', url: 'https://github.com/Shrish-07/procedural-due-process-index/blob/main/papers/dpsi_whitepaper.md', note: 'The formal write-up covering the dimensions, invariants, failure modes, and validity limits.' },
     ],
     citations: [
-      'S.M.V., “The Procedural Due Process Stress Index: Measuring Procedural Degradation in Automated Decision Systems,” project whitepaper (2026).',
+      'S.M.V., DPSI whitepaper, “Measuring Procedural Degradation in Automated Decision Systems” (2026).',
       'Grannis v. Orban, 234 U.S. 385, 394 (1916). “The fundamental requisite of due process of law is the opportunity to be heard.”',
     ],
   },
@@ -81,7 +121,6 @@ export const projects: Project[] = [
     ],
     tech: ['Python', 'Agent Modeling', 'Rule Systems', 'Simulation'],
     highlight: 'Adversarial violation rate of 100%',
-    featured: true,
     links: [
       { label: 'GitHub repository', url: 'https://github.com/Shrish-07/ai-legal-simulation', note: 'The runnable simulation framework, experiment configs, and full results sets.' },
     ],
@@ -127,7 +166,7 @@ export const projects: Project[] = [
       { label: 'GitHub repository', url: 'https://github.com/Shrish-07/fairground-fairness-benchmark', note: 'Replication notebooks, the legal audit memo, the robustness matrix, and systemic findings.' },
     ],
     citations: [
-      'Simson, Fabris, Fröhner, Kreuter & Kern, “Bias Begins with Data: The FairGround Corpus for Robust and Reproducible Research on Algorithmic Fairness,” arXiv:2510.22363 (2025).',
+      'Simson, Fabris, Fröhner, Kreuter & Kern, “Bias Begins with Data,” the FairGround Corpus for robust and reproducible research on algorithmic fairness, arXiv:2510.22363 (2025).',
       'COMPAS recidivism dataset as distributed with FairGround, originally compiled and analyzed by ProPublica (2016).',
       'Regulation (EU) 2024/1689 (the AI Act), high-risk system requirements.',
     ],
@@ -167,7 +206,7 @@ export const projects: Project[] = [
     name: 'Cross-Sectional Equity Validation',
     tagline: 'Quant Finance Validation',
     domain: 'Quantitative Finance',
-    category: 'quant-data',
+    category: 'quant-finance',
     year: '2026',
     short: 'Published SSRN paper + reproducible pipeline evaluating nine cross-sectional equity signals under Combinatorial Purged Cross-Validation and Probability of Backtest Overfitting.',
     long: [
@@ -176,6 +215,7 @@ export const projects: Project[] = [
     ],
     tech: ['Python', 'CPCV', 'PBO', 'Statistical Validation', 'Quant Finance'],
     highlight: 'SSRN · PBO ≈ 0.60',
+    featured: true,
     links: [
       { label: 'GitHub repository (Sourish-07)', url: 'https://github.com/Sourish-07/cross-sectional-equity-validation', note: 'The reproducible research pipeline covering the dataset builder, CPCV run, backtest, PBO computation, and cost sweep.' },
       { label: 'SSRN paper (published)', url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6078546', note: 'The formal published paper, DOI 10.2139/ssrn.6078546.' },
@@ -188,7 +228,7 @@ export const projects: Project[] = [
     ],
   },
 
-  /* ── Full-stack applications ── */
+  /* == Full-stack == */
   {
     slug: 'lawlens',
     name: 'LawLens',
@@ -232,15 +272,15 @@ export const projects: Project[] = [
     ],
   },
 
-  /* ── Quant & data ── */
+  /* == Quant & finance == */
   {
     slug: 'orbit',
     name: 'O.R.B.I.T.',
     tagline: 'NYC Property Price Prediction',
     domain: 'Real Estate ML',
-    category: 'quant-data',
+    category: 'quant-finance',
     year: '2025',
-    short: 'NYC property-price forecasting platform. LightGBM champion model (MAE ≈ 0.429 log-price), SHAP interpretability, political-scenario simulation, and a seven-page Streamlit app.',
+    short: 'NYC property-price forecasting platform. Stacked gradient-boosting ensembles (XGBoost + LightGBM + Bayesian Ridge, champion MAE ≈ 0.42 log-price), SHAP interpretability, political-scenario simulation, and a seven-page Streamlit app.',
     long: [
       'O.R.B.I.T. (Observational Real-estate Behavior & Intelligence Toolkit) is a reproducible research platform for property-level price forecasting in New York City. It canonicalizes public datasets (PLUTO, PAD, DOF/ACRIS sales, council-district election returns), trains gradient-boosting models, and exposes a seven-page Streamlit application for single-property exploration, batch scoring, and political-scenario simulation.',
       'Leakage control is engineered in. Known leaky variables are explicitly blacklisted before training. Political-ideology signals are computed by aggregating election results across multiple years, and three scenario families (liberal, conservative, mixed-governance) translate governance shifts into price effects. This project is the empirical basis for my pending paper on political ideology and residential property prices.',
@@ -267,7 +307,7 @@ export const projects: Project[] = [
     ],
   },
 
-  /* ── AI systems ── */
+  /* == Computer vision == */
   {
     slug: 'attune',
     name: 'Attune',
@@ -286,27 +326,7 @@ export const projects: Project[] = [
       { label: 'GitHub repository', url: 'https://github.com/Shrish-07/NexHacks', note: 'The Attune / NexHacks public record. The repo name predates the product name.' },
     ],
   },
-  {
-    slug: 'mcp-agent',
-    name: 'MCP Trading Agent',
-    tagline: 'LLM Tooling Server',
-    domain: 'AI Tooling',
-    category: 'ai-systems',
-    year: '2026',
-    short: 'A Model Context Protocol toolchain paired with an Anthropic-powered equities research agent. Safety-hardened, dry-run-locked in code, and fully journaled.',
-    long: [
-      'An experiment in LLM-native systems. A custom Model Context Protocol (MCP) toolchain around the Robinhood trading endpoint, paired with an Anthropic-powered agent that ingests market data and headlines, journals decisions per ticker, tracks positions and P&L, and routes every action through a hardened execution layer.',
-      'Safety is engineered in, not configured on. DRY_RUN is enforced at the logic layer rather than in configuration, with explicit pricing, retry handling, and cost tracking. The project demonstrates the emerging pattern of auditable, tool-using agents acting on live external systems with real guardrails.',
-    ],
-    tech: ['Python', 'MCP', 'LLM Tooling', 'Anthropic API', 'Risk Engineering'],
-    highlight: 'DRY_RUN enforced in logic',
-    links: [
-      { label: 'GitHub repository (Sourish-07)', url: 'https://github.com/Sourish-07/MCP', note: 'The MCP server, agent core (ingest, metrics, decision, execution), and run documentation.' },
-    ],
-    citations: ['Robinhood MCP trading endpoint, used as the external system under audit.'],
-  },
-
-  /* ── Hackathons ── */
+  /* == Hackathons == */
   {
     slug: 'trust-me-bro',
     name: 'Trust Me Bro',
@@ -355,19 +375,19 @@ export const projects: Project[] = [
   {
     slug: 'politifolio',
     name: 'Politi-folio',
-    tagline: 'Civic Tech Portfolio',
-    domain: 'Civic Tech',
+    tagline: 'TartanHacks 2026 · 1st Place · BNY Track',
+    domain: 'Fintech · Civic Tech',
     category: 'hackathon',
-    year: '2025',
-    short: 'Geopolitical-intelligence platform for XRP Ledger reconciliation and risk monitoring. Dashboards, AI decision panels, a compliance monitor, and live map views.',
+    year: '2026',
+    short: 'First place in the BNY Track at TartanHacks 2026. A geopolitical-intelligence platform for XRP Ledger reconciliation and risk monitoring, built for back-office fintech work like compliance, risk assessment, and transaction reconciliation.',
     long: [
-      'Politi-folio is a geopolitical-intelligence platform for XRP Ledger reconciliation and risk monitoring. Transaction dashboards, AI decision panels, compliance monitoring, risk analytics, and live map views, with shared types across a Node.js/Express back end and a React + TypeScript (Vite) front end.',
-      'A team project, and the repository lives under a teammate’s account. There is a live deployment on Netlify so the product can be used immediately.',
+      'Politi-folio won the BNY back-office fintech track at TartanHacks, the 24-hour hackathon run by ScottyLabs at Carnegie Mellon University. It is a geopolitical-intelligence platform for XRP Ledger reconciliation and risk monitoring, with transaction dashboards, AI decision panels, compliance monitoring, risk analytics, and live map views.',
+      'The back end is Node.js and Express with dedicated services for XRPL, sanctions screening, Anthropic-driven analysis, and risk scoring, sharing types with a React and TypeScript Vite front end. A team project, with a live deployment on Netlify and the repository under a teammate’s account as built.',
     ],
-    tech: ['React', 'TypeScript', 'Node.js', 'XRPL', 'Netlify'],
-    highlight: 'Live demo',
+    tech: ['React', 'TypeScript', 'Node.js', 'Express', 'XRPL', 'Anthropic', 'Netlify'],
+    highlight: '1st Place · BNY Track',
     links: [
-      { label: 'GitHub repository (jabnow)', url: 'https://github.com/jabnow/Politi-folio', note: 'The canonical project home, under a teammate’s account as built.' },
+      { label: 'GitHub repository (jabnow)', url: 'https://github.com/jabnow/Politi-folio', note: 'The canonical project home, under a teammate’s account as built, and the record of the BNY Track win.' },
       { label: 'Live demo', url: 'https://politifolio.netlify.app/', note: 'The deployed front end, clickable and current.' },
     ],
   },

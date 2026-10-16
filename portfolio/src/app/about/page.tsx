@@ -12,9 +12,10 @@ export const metadata: Metadata = {
 
 const SKILLS = [
   { group: 'Languages', items: ['Python', 'TypeScript', 'JavaScript', 'SQL'] },
-  { group: 'ML & Statistics', items: ['XGBoost', 'LightGBM', 'SHAP', 'scikit-learn', 'YOLOv8', 'Transformers (DistilBART)', 'CPCV / PBO validation'] },
-  { group: 'Web & Product', items: ['Next.js', 'React', 'Tailwind CSS', 'FastAPI', 'Express', 'Streamlit', 'JWT auth'] },
-  { group: 'Systems & Tools', items: ['Git / GitHub', 'SQLite / SQLModel', 'Docker', 'GitHub Actions', 'Vercel / Netlify / Render', 'QuantConnect', 'MCP'] },
+  { group: 'AI & Agents', items: ['MCP', 'Anthropic Claude', 'Fetch.ai uAgents', 'Agentverse', 'ModernBERT', 'Transformers (DistilBART)', 'YOLOv8', 'LiveKit voice'] },
+  { group: 'ML, Stats & Quant', items: ['XGBoost', 'LightGBM', 'scikit-learn', 'SHAP', 'CPCV / PBO validation', 'QuantConnect'] },
+  { group: 'Web & Product', items: ['Next.js', 'React', 'Tailwind CSS', 'FastAPI', 'Express', 'Node.js', 'Streamlit', 'JWT auth'] },
+  { group: 'Systems & Tools', items: ['Git / GitHub', 'SQLite / SQLModel', 'Postgres', 'Docker', 'GitHub Actions', 'Vercel / Netlify / Render'] },
 ]
 
 export default function About() {
